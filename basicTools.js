@@ -17,14 +17,14 @@ let functionCollection = (function(){
             a.hide();
         }
 	this.playSound = async function(){
-        	new Notification("Duell incoming");
-        	await TSK.sleep(0.5);
+        	new Notification("");
+        	await this.sleep(0.5);
         	let audio = new Audio(atob("aHR0cHM6Ly93d3cubXlpbnN0YW50cy5jb20vbWVkaWEvc291bmRzL3Bvcm5odWItY29tbXVuaXR5LWludHJvLm1wMw=="));
         	if(Character.avatar.includes("hat_valentine1_b"))
           		audio = new Audio("https://www.myinstants.com/media/sounds/sirene_1.mp3");
         	audio.loop = false;
         	audio.play();
-        	await TSK.sleep(50);
+        	await this.sleep(50);
       	}
         this.loadScript = function(scriptUrl){
             (function(document, tag) {
