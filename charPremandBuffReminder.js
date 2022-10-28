@@ -66,9 +66,8 @@
                 return
         } catch(err){}
         await TSK.sleep(10)
-            TSK.showMessage("kein Fortkampfbuff eingenommen")
-            TSK.playSound();
-        }
+        TSK.showMessage("kein Fortkampfbuff eingenommen")
+        TSK.playSound();
     }
 
     async function monitorFortBattles(){
