@@ -2,7 +2,8 @@ let wsw = (function(){
     function DataStore() {
         this.data = {strength:undefined, flexibility:undefined, dexterity:undefined, 
                      charisma:undefined, punch: undefined, tough:undefined, health:undefined, 
-                     reflex:undefined, shot:undefined, tactic:undefined, appearance:undefined};
+                     reflex:undefined, shot:undefined, tactic:undefined, appearance:undefined,
+                     build:undefined, leadership:undefined, trade:undefined};
         this.lastLoad = 0;
         
         this.loadSkill = function(skill){
