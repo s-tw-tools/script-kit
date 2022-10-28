@@ -42,7 +42,7 @@ let TSK = functionCollection.getTSK();
     fetch("https://s-tw-tools.github.io/script-kit/scripts.csv")
         .then(response => response.text())
         .then(result => {console.log(result); result.split(",").forEach(function(file){
-	        if(!file.endsWith("user.js"))
+	        if(!file.endsWith("user.js") && file != "basicTools.js")
 		        TSK.loadScript("https://s-tw-tools.github.io/script-kit/" + file)
         })
    })
