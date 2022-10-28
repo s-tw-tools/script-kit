@@ -63,7 +63,7 @@ let dwCollection = (function(){
     };
 })();
 
-let DW = dwCollection.getDW();
+let DW = 0;
 
 (function() {
   var icon = $('<div></div>')
@@ -83,6 +83,8 @@ let DW = dwCollection.getDW();
       $(this).css('background-position', '2px 2px');
     })
     .click(function () {
+      if(DW == 0)
+        DW = dwCollection.getDW();
       DW.switchState();
     });
   var bottom = $('<div></div>').attr({
