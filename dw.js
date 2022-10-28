@@ -19,23 +19,14 @@ let dwCollection = (function(){
         while(true){
           await this.isBlocked();
         if(document.getElementsByClassName("people posy-" + Character.position.y + " posx-" + Character.position.x).length > 0)
-           await this.playSound();
+           await TSK.playSound();
         await TSK.sleep(10);
         }
       }
       this.requestPermission = async function(){
         await Notification.requestPermission();
       }
-      this.playSound = async function(){
-        new Notification("Duell incoming");
-        await TSK.sleep(0.5);
-        let audio = new Audio(atob("aHR0cHM6Ly93d3cubXlpbnN0YW50cy5jb20vbWVkaWEvc291bmRzL3Bvcm5odWItY29tbXVuaXR5LWludHJvLm1wMw=="));
-        if(Character.avatar.includes("hat_valentine1_b"))
-          audio = new Audio("https://www.myinstants.com/media/sounds/sirene_1.mp3");
-        audio.loop = false;
-        audio.play();
-        await TSK.sleep(50);
-      }
+
       this.switchState = function(){
         if(this.block)
           TSK.showMessage("warner enabled")
