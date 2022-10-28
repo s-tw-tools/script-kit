@@ -59,12 +59,15 @@
             "mode": "cors"
         });
         let response = await request.json();
-        if(response.msg.items.weapon_hand != "left_arm"){
-            TSK.showMessage("kein Fortkampfbuff eingenommen")
-            TSK.playSound();
-            await TSK.sleep(10)
+        try {
             if(!isLongTimerActiveNow())
                 showMessage("kein Char-PA aktiv")
+            if(response.msg.items.weapon_hand == "left_arm")
+                return
+        } catch(){}
+        await TSK.sleep(10)
+            TSK.showMessage("kein Fortkampfbuff eingenommen")
+            TSK.playSound();
         }
     }
 
