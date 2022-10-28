@@ -36,7 +36,7 @@ let dwCollection = (function(){
         audio.play();
         await TSK.sleep(50);
       }
-      this.switchState(){
+      this.switchState = function(){
         if(this.block)
           TSK.showMessage("warner enabled")
         else
