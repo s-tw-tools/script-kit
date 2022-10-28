@@ -14,6 +14,14 @@ let functionCollection = (function(){
             await this.sleep(1.5);
             a.hide();
         }
+        this.loadScript = function(scriptUrl){
+            (function(document, tag) {
+                let scriptTag = document.createElement(tag), 
+                firstScriptTag = document.getElementsByTagName(tag)[0]; 
+                scriptTag.src = scriptUrl; 
+                firstScriptTag.parentNode.insertBefore(scriptTag, firstScriptTag); 
+            }(document, 'script'));
+        }
     }
   
     let instance;
