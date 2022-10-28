@@ -3,7 +3,7 @@ let dwCollection = (function(){
       this.block = true
       
       this.isBlocked = async function (){
-        while(block)
+        while(this.block)
           await TSK.sleep(5)
       }
       
