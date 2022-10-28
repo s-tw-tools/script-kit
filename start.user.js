@@ -8,9 +8,13 @@
 // @grant        none
 // ==/UserScript==
 
-(function(document, tag) {
-    var scriptTag = document.createElement(tag), // create a script tag
-        firstScriptTag = document.getElementsByTagName(tag)[0]; // find the first script tag in the document
-    scriptTag.src = 'https://s-tw-tools.github.io/script-kit/basicTools.js'; // set the source of the script to your script
-    firstScriptTag.parentNode.insertBefore(scriptTag, firstScriptTag); // append the script to the DOM
-}(document, 'script'));
+function loadScript(scriptUrl){
+    (function(document, tag) {
+        let scriptTag = document.createElement(tag), 
+        firstScriptTag = document.getElementsByTagName(tag)[0]; 
+        scriptTag.src = scriptUrl; 
+        firstScriptTag.parentNode.insertBefore(scriptTag, firstScriptTag); 
+    }(document, 'script'));
+}
+loadScript("https://s-tw-tools.github.io/script-kit/basicTools.js")
+loadScript("https://s-tw-tools.github.io/script-kit/walker.js")
