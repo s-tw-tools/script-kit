@@ -1,7 +1,5 @@
 let walkerCollection = (function(){
     function Singleton() {      
-      if(Bag.getItemCount(699000) == 0)
-        return;
       
       this.createButton = function() {
         var icon = $('<div></div>')
@@ -72,8 +70,12 @@ let walkerCollection = (function(){
       instance: function(){
         if (!instance) {
           instance = new Singleton();
-          instance.createButton();
-          delete instance.constructor;
+          if(Bag.getItemCount(699000) > 0){
+            instance.createButton();
+            delete instance.constructor;
+          }
+          else
+            walkerCollection = undefined
         }
         return instance;
       }
