@@ -62,7 +62,8 @@ let dwCollection = (function(){
       }
     };
 })();
-let DW = dwCollection.getDW()
+
+let DW = dwCollection.getDW();
 
 (function() {
   var icon = $('<div></div>')
