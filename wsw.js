@@ -40,7 +40,7 @@ let wsw = (function(){
           if(new Date(this.lastLoad+1000*60*60) > new Date())
             return
           for (element in this.data)
-            loadSkill(element)
+            this.loadSkill(element)
           this.lastLoad = new Date()-1;
         }
     }
