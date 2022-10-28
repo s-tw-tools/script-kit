@@ -5,6 +5,8 @@ let functionCollection = (function(){
         }
         
         this.showMessage = async function (str,duration){
+	    if(duration == undefined)
+		duration = 1
             let a = "";
             a = new west.gui.Dialog(str)
             a.setY(100)
