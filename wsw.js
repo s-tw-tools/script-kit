@@ -44,6 +44,21 @@ let wsw = (function(){
           this.lastLoad = new Date()-1;
         }
     }
+
+    function PlayerSkills(name){
+      this.data = this.data = {strength:undefined, flexibility:undefined, dexterity:undefined, 
+                         charisma:undefined, punch: undefined, tough:undefined, health:undefined, 
+                         reflex:undefined, shot:undefined, tactic:undefined, appearance:undefined};
+      this.playerName = name;
+    
+      for (element in this.data){
+        this.data[element] = WSW.data[element].ranking.filter(function(player){
+          return player.name.toLowerCase().includes(name)
+        })[0].skill_level
+        if(this.data[element].length > 1)
+          return 
+      }
+    }
   
     let instance;
   
