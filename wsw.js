@@ -66,11 +66,11 @@ function PlayerSkills(name){
   this.playerName = name;
 
   for (element in this.data){
-    this.data[element] = WSW.data[element].ranking.filter(function(player){
+    let result = WSW.data[element].ranking.filter(function(player){
       return player.name.toLowerCase().includes(name)
-    })[0].skill_level
-    if(this.data[element].length > 1)
-      return 
+    })
+    if(result.length <= 1)
+      this.data[element] = result[0].skill_level
   }
 }
 WSW = wsw.getDataStorage();
