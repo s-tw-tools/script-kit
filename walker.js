@@ -21,7 +21,7 @@ let walkerCollection = (function(){
             $(this).css('background-position', '5px 9px');
           })
           .click(function () {
-            switchPosition();
+            walkerCollection.instance().switchPosition()
           });
         var bottom = $('<div></div>').attr({
           class: 'menucontainer_bottom',
@@ -47,29 +47,29 @@ let walkerCollection = (function(){
       }
       this.switchPositionW10 = async function(){
           if(Character.position.x > 20000)
-            startWalk(144);
+            this.startWalk(144);
           else
-            startWalk(158);
+            this.startWalk(158);
       }
       this.switchPositionFairbanks = async function(){
         if(Character.position.x > 20000)
-          startWalk(16);
+          this.startWalk(16);
         else
-          startWalk(8);
+          this.startWalk(8);
       }
       
       this.switchPosition = async function() {
         if(Game.worldName == "Welt 10")
-          switchPositionW10();
+          this.switchPositionW10();
         if(Game.worldName == "Fairbanks")
-          switchPositionFairbanks();
+          this.switchPositionFairbanks();
       }
     }
   
     let instance;
   
     return {
-      init: function(){
+      instance: function(){
         if (!instance) {
           instance = new Singleton();
           instance.createButton();
@@ -79,4 +79,4 @@ let walkerCollection = (function(){
       }
     };
 })();
-walkerCollection.init();
+walkerCollection.instance();
