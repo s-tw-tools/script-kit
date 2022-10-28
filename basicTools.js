@@ -11,7 +11,7 @@ let functionCollection = (function(){
             a.setX(500);
             a.show();
             a.setBlockGame(false);
-            await sleep(1.5);
+            await this.sleep(1.5);
             a.hide();
         }
     }
