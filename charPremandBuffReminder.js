@@ -64,7 +64,7 @@
                 showMessage("kein Char-PA aktiv")
             if(response.msg.items.weapon_hand == "left_arm")
                 return
-        } catch(){}
+        } catch(err){}
         await TSK.sleep(10)
             TSK.showMessage("kein Fortkampfbuff eingenommen")
             TSK.playSound();
