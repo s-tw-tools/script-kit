@@ -37,7 +37,7 @@ let wsw = (function(){
         }
       
         this.loadAllSkills = function(){
-          if(new Date(lastLoad+1000*60*60) > new Date())
+          if(new Date(this.lastLoad+1000*60*60) > new Date())
             return
           for (element in this.data)
             loadSkill(element)
