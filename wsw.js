@@ -57,8 +57,9 @@ let wsw = (function(){
       }
     };
 })();
-function PlayerSkills(name){
+async function PlayerSkills(name){
   WSW.loadAllSkills();
+  await TSK.sleep(2)
   this.data = this.data = {strength:undefined, flexibility:undefined, dexterity:undefined, 
                      charisma:undefined, punch: undefined, tough:undefined, health:undefined, 
                      reflex:undefined, shot:undefined, tactic:undefined, appearance:undefined};
