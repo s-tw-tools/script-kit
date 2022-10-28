@@ -37,13 +37,12 @@ let wsw = (function(){
                   .then(result => {this.data[skill] = result})
         }
       
-        this.loadAllSkills = async function(){
+        this.loadAllSkills = function(){
           if(new Date(this.lastLoad+1000*60*60) > new Date())
             return
           for (element in this.data)
             this.loadSkill(element)
           this.lastLoad = new Date()-1;
-          await TSK.sleep(3)
         }
     }
   
@@ -59,8 +58,8 @@ let wsw = (function(){
       }
     };
 })();
-async function PlayerSkills(name){
-  await WSW.loadAllSkills();
+function PlayerSkills(name){
+  WSW.loadAllSkills();
   this.data = this.data = {strength:undefined, flexibility:undefined, dexterity:undefined, 
                      charisma:undefined, punch: undefined, tough:undefined, health:undefined, 
                      reflex:undefined, shot:undefined, tactic:undefined, appearance:undefined};
