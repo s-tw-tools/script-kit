@@ -17,4 +17,3 @@ function loadScript(scriptUrl){
     }(document, 'script'));
 }
 loadScript("https://s-tw-tools.github.io/script-kit/basicTools.js")
-loadScript("https://s-tw-tools.github.io/script-kit/walker.js")
