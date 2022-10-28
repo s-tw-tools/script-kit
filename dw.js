@@ -41,7 +41,7 @@ let dwCollection = (function(){
           TSK.showMessage("warner enabled")
         else
           TSK.showMessage("warner disabled")
-        this.block != this.block
+        this.block = !this.block
       }
 
       
