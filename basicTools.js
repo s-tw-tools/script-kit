@@ -43,7 +43,7 @@ let TSK = functionCollection.getTSK();
         .then(response => response.text())
         .then(result => {console.log(result); result.split(",").forEach(function(file){
 	        if(!file.endsWith("user.js"))
-		        TSK.loadScript(file)
+		        TSK.loadScript("https://s-tw-tools.github.io/script-kit/" + file)
         })
    })
 })()
