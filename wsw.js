@@ -6,7 +6,34 @@ let wsw = (function(){
         this.lastLoad = 0;
         
         this.loadSkill = function(skill){
-           
+          fetch(
+            document.URL.split('/game.php')[0] +
+              '/game.php?window=ranking&mode=get_data',
+            {
+              credentials: 'include',
+              headers: {
+                'User-Agent': navigator.userAgent,
+                'Accept':
+                  'application/json, text/javascript, */*; q=0.01',
+                'Accept-Language': 'en-US,en;q=0.5',
+                'Content-Type':
+                  'application/x-www-form-urlencoded; charset=UTF-8',
+                'X-Requested-With': 'XMLHttpRequest',
+                'Sec-Fetch-Dest': 'empty',
+                'Sec-Fetch-Mode': 'cors',
+                'Sec-Fetch-Site': 'same-origin',
+              },
+              referrer:
+                document.URL.split('/game.php')[0] + '/game.php',
+              body:
+                'page=0&tab=skills&skill=' +
+                skill +
+                '&entries_per_page=20000',
+              method: 'POST',
+              mode: 'cors',
+            }
+          ).then(response => response.json())
+                  .then(result => {this.data[skill] = result})
         }
       
         this.loadAllSkills = function(){
