@@ -68,8 +68,8 @@
       .appendToCell('head', 'skillName', 'Skill Name')
       .appendToCell('head', 'skillVal', 'Skill Value');
 
-    while(WSW.lastLoad == 0)
-      await TSK.sleep(0.1)
+    while(WSW.data.tactic == undefined)
+      await TSK.sleep(1)
     const skills = new PlayerSkills(player111).data
     for (const key in skills) {
       const val = skills[key];
