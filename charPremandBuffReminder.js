@@ -6,7 +6,7 @@
         if(isLongTimerActive())
             return
         if(await isQuestAvailable())
-            showMessage("Du kannst Charakterpremium bei Angus abholen");
+            TSK.showMessage("Du kannst Charakterpremium bei Angus abholen");
     })();
 
     function isLongTimerActive(){
