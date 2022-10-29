@@ -1,6 +1,8 @@
 (async function() {
     async function downTimeChecker(item_id){
-        await TSK.sleep(Math.random() * 10 + 60)
+        if(Bag.getItemByItemId(item_id) == undefined)
+            return
+        await TSK.sleep(Math.random() * 10 + 5)
         do
             await TSK.sleep(10 + Math.random() * 5)
         while(new Date(Bag.getItemByItemId(item_id).cooldown * 1000) > new Date())
