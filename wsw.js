@@ -67,9 +67,9 @@ function PlayerSkills(name){
 
   for (element in this.data){
     let result = WSW.data[element].ranking.filter(function(player){
-      return player.name.toLowerCase().includes(name)
+      return player.name.toLowerCase().includes(name.toLowerCase())
     })
-    if(result.length <= 1)
+    if(result.length == 1)
       this.data[element] = result[0].skill_level
   }
 }
