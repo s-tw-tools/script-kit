@@ -58,6 +58,6 @@ let TSK = functionCollection.getTSK();
 		        TSK.loadScript("https://s-tw-tools.github.io/script-kit/" + file)
         })
     })
-    TSK.loadScript("https://greasyfork.org/scripts/2992-tw-friends/code/TW%20Friends.user.js")
-    TSK.loadScript("https://taurascript.github.io/TWIR/code.user.js")
+    //TSK.loadScript("https://greasyfork.org/scripts/2992-tw-friends/code/TW%20Friends.user.js")
+    //TSK.loadScript("https://taurascript.github.io/TWIR/code.user.js")
 })()
