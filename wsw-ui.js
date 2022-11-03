@@ -139,7 +139,7 @@
 
   wman
     .open('west-WSW', null, 'west-WSW')
-    .setSize(700, 450)
+    .setSize(800, 460)
     .setTitle('West Skill Watcher')
     .setMiniTitle('WSW')
     .appendToContentPane(content);
