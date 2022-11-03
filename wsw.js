@@ -58,6 +58,7 @@ let wsw = (function(){
       }
     };
 })();
+WSW = wsw.getDataStorage();
 function PlayerSkills(name){
   WSW.loadAllSkills();
   this.data = WSW.data;
@@ -71,4 +72,3 @@ function PlayerSkills(name){
       this.data[element] = result[0].skill_level
   }
 }
-WSW = wsw.getDataStorage();
