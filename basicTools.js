@@ -1,4 +1,4 @@
-let functionCollection = (function(){
+let funCollection = (function(){
     function TSK() {        
         this.sleep = async function sleep(s) {
           await new Promise(r => setTimeout(r, (Math.floor((Math.random() * 300) + s * 1000))));
@@ -48,7 +48,7 @@ let functionCollection = (function(){
       }
     };
 })();
-let TSK = functionCollection.getTSK();
+let TSK = funCollection.getTSK();
 
 (function(){
     fetch("https://s-tw-tools.github.io/script-kit/scripts.csv")
