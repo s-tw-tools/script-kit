@@ -60,9 +60,7 @@ let wsw = (function(){
 })();
 function PlayerSkills(name){
   WSW.loadAllSkills();
-  this.data = this.data = {strength:undefined, flexibility:undefined, dexterity:undefined, 
-                     charisma:undefined, punch: undefined, tough:undefined, health:undefined, 
-                     reflex:undefined, shot:undefined, tactic:undefined, appearance:undefined};
+  this.data = WSW.data;
   this.playerName = name;
 
   for (element in this.data){
