@@ -32,7 +32,7 @@
   );
   function openWSWWindow() {
   if (!document.getElementById('WSWstyle')) {
-    const css = `.cell.cell_0.name{width:100%;margin-bottom:5px;font-size:14px}.skillName{width:50%}.skillVal{width:50%}`;
+    const css = `.cell.cell_0.name{width:100%;margin-bottom:5px;font-size:13px}.skillName{width:25%}.skillVal{width:25%}.skillName2{width:25%}.skillVal2{width:25%}`;
     const style = document.createElement('style');
     style.innerHTML = css;
     style.id = 'WSWstyle';
@@ -139,7 +139,7 @@
 
   wman
     .open('west-WSW', null, 'west-WSW')
-    .setSize(800, 460)
+    .setSize(730, 460)
     .setTitle('West Skill Watcher')
     .setMiniTitle('WSW')
     .appendToContentPane(content);
