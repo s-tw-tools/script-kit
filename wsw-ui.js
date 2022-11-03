@@ -60,26 +60,66 @@
       .addColumn('name', 'name')
       .addColumn('skillName', 'skillName')
       .addColumn('skillVal', 'skillVal')
+      .addColumn('skillName2', 'skillName')
+      .addColumn('skillVal2', 'skillVal')
       .appendToCell(
         'head',
         'name',
         'Name: ' + player111 + '<br>'
       )
       .appendToCell('head', 'skillName', 'Skill Name')
-      .appendToCell('head', 'skillVal', 'Skill Value');
+      .appendToCell('head', 'skillVal', 'Skill Value')
+      .appendToCell('head', 'skillName2', 'Skill Name')
+      .appendToCell('head', 'skillVal2', 'Skill Value');
 
     while(WSW.data.tactic == undefined)
       await TSK.sleep(3)
     
     const skills = new PlayerSkills(player111).data
-    for (const key in skills) {
-      const val = skills[key];
-
       table
         .appendRow()
-        .appendToCell(-1, 'skillName', key)
-        .appendToCell(-1, 'skillVal', val);
-    }
+        .appendToCell(-1, 'skillName', "strength")
+        .appendToCell(-1, 'skillVal', skills.strength)
+        .appendToCell(-1, 'skillName', "health")
+        .appendToCell(-1, 'skillVal', skills.health);
+      table
+        .appendRow()
+        .appendToCell(-1, 'skillName', "flexibility")
+        .appendToCell(-1, 'skillVal', skills.flexibility)
+        .appendToCell(-1, 'skillName', "punch")
+        .appendToCell(-1, 'skillVal', skills.punch);
+      table
+        .appendRow()
+        .appendToCell(-1, 'skillName', "dexterity")
+        .appendToCell(-1, 'skillVal', skills.dexterity)
+        .appendToCell(-1, 'skillName', "shot")
+        .appendToCell(-1, 'skillVal', skills.shot);
+      table
+        .appendRow()
+        .appendToCell(-1, 'skillName', "charisma")
+        .appendToCell(-1, 'skillVal', skills.charisma)
+        .appendToCell(-1, 'skillName', "tough")
+        .appendToCell(-1, 'skillVal', skills.tough);
+    
+      table
+        .appendRow()
+        .appendToCell(-1, 'skillName', "leadership")
+        .appendToCell(-1, 'skillVal', skills.leadership)
+        .appendToCell(-1, 'skillName', "reflex")
+        .appendToCell(-1, 'skillVal', skills.reflex);
+      table
+        .appendRow()
+        .appendToCell(-1, 'skillName', "trade")
+        .appendToCell(-1, 'skillVal', skills.trade)
+        .appendToCell(-1, 'skillName', "appearance")
+        .appendToCell(-1, 'skillVal', skills.appearance);
+      table
+        .appendRow()
+        .appendToCell(-1, 'skillName', "build")
+        .appendToCell(-1, 'skillVal', skills.build)
+        .appendToCell(-1, 'skillName', "tactic")
+        .appendToCell(-1, 'skillVal', skills.tactic);
+    
 
     window.t = table;
     window.tu = () => {
