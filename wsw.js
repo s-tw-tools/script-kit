@@ -58,11 +58,10 @@ let wsw = (function(){
       }
     };
 })();
+WSW = wsw.getDataStorage();
 function PlayerSkills(name){
   WSW.loadAllSkills();
-  this.data = this.data = {strength:undefined, flexibility:undefined, dexterity:undefined, 
-                     charisma:undefined, punch: undefined, tough:undefined, health:undefined, 
-                     reflex:undefined, shot:undefined, tactic:undefined, appearance:undefined};
+  this.data = WSW.data;
   this.playerName = name;
 
   for (element in this.data){
@@ -73,4 +72,3 @@ function PlayerSkills(name){
       this.data[element] = result[0].skill_level
   }
 }
-WSW = wsw.getDataStorage();
