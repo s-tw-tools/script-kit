@@ -132,16 +132,19 @@
 
     results.html(html);
   });
+  const buttonHtml = button.getMainDiv();  
+  content.append(buttonHtml);
 
-  const buttonHtml = button.getMainDiv();
+
+
   const buttonCopy = new west.gui.Button('Copy List');
   buttonCopy.click = async function(){
       let skills = document.getElementById("wswSkillTable").innerText.replaceAll(";", "\n").split("\n").slice(2);
       await navigator.clipboard.writeText(skills);
       TSK.showMessage("copied to clipboard")
   }
+  content.append(buttonCopy.getMainDiv())
 
-  content.append(buttonHtml);
   content.append(results);
 
   wman
