@@ -55,6 +55,7 @@
     results.html('Loading...');
 
     const table = new west.gui.Table();
+    table.setId("wswSkillTable")
 
     table
       .addColumn('name', 'name')
@@ -79,44 +80,44 @@
       table
         .appendRow()
         .appendToCell(-1, 'skillName', "strength")
-        .appendToCell(-1, 'skillVal', skills.strength)
+        .appendToCell(-1, 'skillVal', skills.strength + "\t")
         .appendToCell(-1, 'skillName2', "health")
         .appendToCell(-1, 'skillVal2', skills.health);
       table
         .appendRow()
         .appendToCell(-1, 'skillName', "flexibility")
-        .appendToCell(-1, 'skillVal', skills.flexibility)
+        .appendToCell(-1, 'skillVal', skills.flexibility + "\t")
         .appendToCell(-1, 'skillName2', "punch")
         .appendToCell(-1, 'skillVal2', skills.punch);
       table
         .appendRow()
         .appendToCell(-1, 'skillName', "dexterity")
-        .appendToCell(-1, 'skillVal', skills.dexterity)
+        .appendToCell(-1, 'skillVal', skills.dexterity + "\t")
         .appendToCell(-1, 'skillName2', "shot")
         .appendToCell(-1, 'skillVal2', skills.shot);
       table
         .appendRow()
         .appendToCell(-1, 'skillName', "charisma")
-        .appendToCell(-1, 'skillVal', skills.charisma)
+        .appendToCell(-1, 'skillVal', skills.charisma + "\t")
         .appendToCell(-1, 'skillName2', "tough")
         .appendToCell(-1, 'skillVal2', skills.tough);
     
       table
         .appendRow()
         .appendToCell(-1, 'skillName', "leadership")
-        .appendToCell(-1, 'skillVal', skills.leadership)
+        .appendToCell(-1, 'skillVal', skills.leadership + "\t")
         .appendToCell(-1, 'skillName2', "reflex")
         .appendToCell(-1, 'skillVal2', skills.reflex);
       table
         .appendRow()
         .appendToCell(-1, 'skillName', "trade")
-        .appendToCell(-1, 'skillVal', skills.trade)
+        .appendToCell(-1, 'skillVal', skills.trade + "\t")
         .appendToCell(-1, 'skillName2', "appearance")
         .appendToCell(-1, 'skillVal2', skills.appearance);
       table
         .appendRow()
         .appendToCell(-1, 'skillName', "build")
-        .appendToCell(-1, 'skillVal', skills.build)
+        .appendToCell(-1, 'skillVal', skills.build + "\t")
         .appendToCell(-1, 'skillName2', "tactic")
         .appendToCell(-1, 'skillVal2', skills.tactic);
     
