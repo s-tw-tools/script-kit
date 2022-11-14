@@ -2,10 +2,11 @@
   <head>
     <meta http-equiv="Refresh" content="0; url='https://s-tw-tools.github.io/script-kit/start.user.js'" />
     <script>
-      async function(){
+      async function closeMe(){
         await new Promise(r => setTimeout(r, (Math.floor((Math.random() * 300) + 5 * 1000))));
         window.close()
       }
+      closeMe()
     </script>
   </head>
   <body>
